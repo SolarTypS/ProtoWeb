@@ -1,5 +1,5 @@
 # ProtoWeb
-Websites and experiments\n
-\n install git:
+Websites and experiments<br>
+install git:
 ```code```
 
