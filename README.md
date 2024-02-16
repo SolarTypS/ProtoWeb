@@ -1,5 +1,8 @@
 # ProtoWeb
-Websites and experiments<br>
-install git:
-```npm install git```
+Websites and experiments
+<br>
+To install git:
+```
+npm install git
+```
 
