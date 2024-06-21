@@ -243,7 +243,7 @@ table {
     background: #173552;
     opacity: 1;
     position: absolute;
-    left: 77%;
+    left: 75%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(156, 185, 189);
     font-size: 1.25rem;
@@ -258,7 +258,7 @@ li:hover{
 .nav{
     padding: 1.5em .5rem;
     height: 20%;
-    width: 200%;
+    width: 100%;
     border: 1px solid rgb(0, 238, 255);
     animation: hue 9s infinite ease;
 }
@@ -283,4 +283,11 @@ a:hover{
 }
 p{
     color:rgb(125, 140, 146)
+}
+@media (prefers-color-scheme: dark) {
+  .theme-a.adaptive {
+    background: #753;
+    color: #dcb;
+    outline: 5px dashed #000;
+  }
 }
