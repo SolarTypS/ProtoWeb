@@ -1,62 +1,91 @@
-<!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+    <link href="/path/to/tailwind.css" rel="stylesheet">
+    <title>H&D7</title>
+    <script src="https://cdn.jsdelivr.net/npm/animxyz@0.1.0/dist/animxyz.min.js"></script>
 </head>
-<body>
-    <div class="header">
-        <img src="assets/HD7_logo.png" alt="logo H&D7" class="logo">
-     </div>
-     <div id="navbar">
-        <div class="box-bar"><div class="h7">Horaires :</div>
-        <div class="tab">
-            <table>
-                <caption>
-                  Les horaires sont aussi disponibles sur les sites ci-joints (sur la droite)
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Conflans (Lundi à Samedi)</th>
-                    <th scope="col">10h-14h</th>
-                    <th scope="col">15h-20h</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">St Ouen l'Aumône (Lundi à Dimanche) </th>
-                    <td>10h-14h</td>
-                    <td>15h-20h</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Ermont (Lundi à Dimanche)</th>
-                    <td>10h-14h</td>
-                    <td>15h-20h</td>
-                  </tr>
-                </tbody>
-                
-              </table>
-              
+<body class="h-full flex flex-col bg-gradient-to-r from-blue-200 to-blue-300">
+<header class="bg-[#1870C1] py-4 flex items-center justify-center relative">
+    <img src="https://raw.githubusercontent.com/EtherD3v/ProtoWeb/develop/assets/HD7_logo.png" alt="H&D7 Logo" class="h-16 absolute left-4">
+    <h1 class="text-white font-bold text-xl sm:text-2xl px-4">Vente de consommables et matériel informatique</h1>
+</header>
+
+
+
+    <main class="flex-grow flex flex-col md:flex-row">
+        <div class="md:w-1/4 bg-blue-400 p-4">
+            <h2 class="text-lg font-bold mb-2 text-white">Horaires :</h2>
+            <p class="mb-4 text-white">Les horaires sont aussi disponibles sur les sites ci-joints <br>(Voir =><code> En savoir plus</code>)</p>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2 text-white"></th>
+                            <th class="px-4 py-2 text-white">10h-14h</th>
+                            <th class="px-4 py-2 text-white">15h-20h</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-4 py-2 font-bold text-white">Conflans (Lundi à Samedi)</td>
+                            <td class="px-4 py-2 text-center text-white">✓</td>
+                            <td class="px-4 py-2 text-center text-white">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 font-bold text-white">St Ouen l'Aumône (Lundi à Dimanche)</td>
+                            <td class="px-4 py-2 text-center text-white">✓</td>
+                            <td class="px-4 py-2 text-center text-white">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-2 font-bold text-white">Ermont (Lundi à Dimanche)</td>
+                            <td class="px-4 py-2 text-center text-white">✓</td>
+                            <td class="px-4 py-2 text-center text-white">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
+        <div class="md:w-1/2 p-4 flex flex-col items-center">
+            <ul class="list-disc space-y-8">
+                <li class="xyz-in xyz-animate xyz-delay-4">
+                    <h3 class="text-xl font-bold mb-2">Réparation de vos supports informatiques..</h3>
+                    <img src="https://raw.githubusercontent.com/EtherD3v/ProtoWeb/develop/assets/repar.png" alt="Téléphone" class="w-96 h-auto mb-4 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
+                  <h3 class="text-xl font-bold mb-2">.. et de vos appareils téléphoniques.</h3>
+                    <img src="https://raw.githubusercontent.com/EtherD3v/ProtoWeb/develop/assets/phone.png" alt="Téléphone" class="w-96 h-auto mb-4 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
+                </li>
+            </ul>
         </div>
-    </div>
-     <div class="content">
-      <li>Réparation de vos supports informatiques.. </li>
-      <img src="assets/repar.png" alt="img reparation" class="img-ex">
-      <li>.. Et de vos appareils téléphoniques.</li>
-      <img src="assets/phone.png" alt="img phone" class="img-ex">
-    </div>
-    <div class="footer">
-      <li style="margin-top: 2rem; text-decoration: underline;">Nous contacter : </li>
-      <p>01 34 67 95 12</p>
-      <li style="text-decoration: underline;">Adresses des boutiques H&D7 : </li>
-      <p>Ermont · Conflans-Sainte-Honorine · Saint-Ouen-l'Aumône</p>
-      <li style="text-decoration: underline;">En savoir plus :  </li><br>
-      <div class="nav">
-        <a href="https://www.pagesjaunes.fr/pros/57412645">pagesjaunes.fr</a><br><br>
-        <a href="https://superordi.fr/78/conflans-sainte-honorine/h-d-7-informatique-61q">superordi.fr</a><br><br>
-        <a href="https://www.facebook.com/people/HD7-Informatique-Conflans/100042736826179/">facebook.com</a>
+         <div class="md:w-1/4 bg-sky-700 p-4 chatbox">
+           <h2 class="text-[#CFFAFE] font-bold sm:text-3xl underline chatTitle infoChat">H&D7's ChatBOT</h2>
+           <div class="top">
+        <h1 class="text-lg text-[#7dd3fc] grow">Un besoin ? Une question ?</h1>
+      </div>
+      <div class="mid">
+        <div class="chat">
+          <p id="chatLog" class="text-2xl infoChat2">Requêtes possibles : Quoi ? Pourquoi ? Comment ? Quand ? Où ?</p>
+        </div>
+      </div>
+      <div class="input">
+        <input type="text" id="userBox" onkeydown="if(event.keyCode == 13){ talk()}" placeholder="Type your Question">
       </div>
     </div>
+         </div>
+    </main>
+
+    <footer class="bg-[#0c4a6e] text-white p-4 flex flex-col items-center">
+        <h3 class="text-lg font-bold underline mb-2">Nous contacter :</h3>
+        <p class="mb-4">01 34 67 95 12</p>
+        <h3 class="text-lg font-bold underline mb-2">Adresses des boutiques H&D7 :</h3>
+        <p class="mb-4">Ermont · Conflans-Sainte-Honorine · Saint-Ouen-l'Aumône</p>
+        <h3 class="text-lg font-bold underline mb-2">En savoir plus :</h3>
+        <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+            <a href="https://www.pagesjaunes.fr/pros/57412645" class="text-blue-200 hover:text-blue-300 transition-colors duration-300" target="_blank">pagesjaunes.fr</a>
+            <a href="https://superordi.fr/78/conflans-sainte-honorine/h-d-7-informatique-61q" class="text-blue-200 hover:text-blue-300 transition-colors duration-300" target="_blank">superordi.fr</a>
+            <a href="https://www.facebook.com/people/HD7-Informatique-Conflans/100042736826179/" class="text-blue-200 hover:text-blue-300 transition-colors duration-300" target="_blank">facebook.com</a>
+        </div>
+    </footer>
 </body>
+
+
