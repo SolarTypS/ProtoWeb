@@ -1,51 +1,19 @@
 <?php
-$errors = [];
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get POST data
-    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
-    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
-    $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
 
-    // Validate form fields
-    if (empty($name)) {
-        $errors[] = 'Name is empty';
-    }
+    $to = "aymericduparc787@gmail.com";
+    $subject = "Nouveau message du formulaire de contact";
+    $body = "Nom: " . $name . "\n";
+    $body .= "Email: " . $email . "\n";
+    $body .= "Message: " . $message;
 
-    if (empty($email)) {
-        $errors[] = 'Email is empty';
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Email is invalid';
-    }
-
-    if (empty($message)) {
-        $errors[] = 'Message is empty';
-    }
-
-    // If no errors, send email
-    if (empty($errors)) {
-        // Recipient email address (replace with your own)
-        $recipient = "ilerumeurexotic@gmail.com";
-
-        // Additional headers
-        $headers = "From: $name <$email>";
-
-        // Send email
-        if (mail($recipient, $message, $headers)) {
-            echo "Email sent successfully!";
-        } else {
-            echo "Failed to send email. Please try again later.";
-        }
+    if (mail($to, $subject, $body)) {
+        echo "Votre message a été envoyé avec succès.";
     } else {
-        // Display errors
-        echo "The form contains the following errors:<br>";
-        foreach ($errors as $error) {
-            echo "- $error<br>";
-        }
+        echo "Une erreur s'est produite lors de l'envoi du message.";
     }
-} else {
-    // Not a POST request, display a 403 forbidden error
-    header("HTTP/1.1 403 Forbidden");
-    echo "You are not allowed to access this page.";
 }
 ?>
